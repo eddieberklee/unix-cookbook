@@ -1,0 +1,22 @@
+
+grep -rl "search term" . | xargs sed -i "s/match1/match2/g"
+
+
+GREP
+----
+grep -r: recursive
+grep -l: list only files not lines
+
+
+SED
+---
+sed -i: edit files in-place
+
+
+MISC
+----
+xargs (feed pipe input one by one as input)
+      (wikipedia: execute command from standard input)
+
+
+
