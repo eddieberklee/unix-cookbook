@@ -7,9 +7,13 @@ echo ./*.html | xargs sed -i "0,/<\/script>/{s/<\/script>/<\/script><script\ src
 
 CONVENIENCE FUNCTION IN BASHRC
 sub_multiple() {
-  # $1: Filetype
-  # $2: Search Term
-  # $3: Replace Term
+  # Limitation:
+    # Have to double-escape any special characters.
+    # Couldn't figure out how to escape those automatically in here. 
+  # Arguments:
+    # $1: Filetype
+    # $2: Search Term
+    # $3: Replace Term
   echo ./*.$1 | xargs sed -i "0,/$2/{s/$2/$3/}"
 }
 
