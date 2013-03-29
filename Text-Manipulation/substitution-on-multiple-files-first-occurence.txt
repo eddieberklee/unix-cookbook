@@ -1,0 +1,9 @@
+
+In a directory full of .html's that I wanted to do a text substitution to add a <script></script>...
+
+echo ./*.html | xargs sed -i "0,/<\/script>/{s/<\/script>/<\/script><script\ src='ganalytics.js'><\/script>/}"
+
+
+
+
+
