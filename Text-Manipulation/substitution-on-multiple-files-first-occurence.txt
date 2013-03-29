@@ -1,7 +1,18 @@
 
+DESCRIPTION
 In a directory full of .html's that I wanted to do a text substitution to add a <script></script>...
 
+COMMAND
 echo ./*.html | xargs sed -i "0,/<\/script>/{s/<\/script>/<\/script><script\ src='ganalytics.js'><\/script>/}"
+
+CONVENIENCE FUNCTION IN BASHRC
+sub_multiple() {
+  # $1: Filetype
+  # $2: Search Term
+  # $3: Replace Term
+  echo ./*.$1 | xargs sed -i "0,/$2/{s/$2/$3/}"
+}
+
 
 
 
