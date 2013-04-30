@@ -1,0 +1,9 @@
+
+ls -F | grep "/" | xargs ls
+
+-F flag: includes ending slash for directories, no change for files
+
+
+
+
+
